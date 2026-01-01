@@ -1,0 +1,11 @@
+services:
+  booksonic:
+    image: linuxserver/booksonic:latest
+    container_name: booksonic
+    ports:
+      - "4040:4040"
+    volumes:
+      - /portainer/Books:/books
+      - /portainer/Files/Podcasts:/podcast
+      - /opt/stacks/booksonic/data:/config
+    restart: unless-stopped

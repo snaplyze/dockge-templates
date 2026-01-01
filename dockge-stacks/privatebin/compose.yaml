@@ -1,0 +1,11 @@
+services:
+  privatebin:
+    image: privatebin/nginx-fpm-alpine:latest
+    container_name: privatebin
+    ports:
+      - "8080:8080"
+    volumes:
+      - /portainer/Files/AppData/PrivateBin:/srv/data
+      - /opt/stacks/privatebin/data/srv_cfg:/srv/cfg
+    restart: unless-stopped
+    privileged: true

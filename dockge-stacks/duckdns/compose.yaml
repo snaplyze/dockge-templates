@@ -1,0 +1,5 @@
+services:
+  duckdns:
+    image: linuxserver/duckdns:latest
+    container_name: duckdns
+    restart: unless-stopped

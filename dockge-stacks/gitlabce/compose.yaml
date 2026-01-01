@@ -1,0 +1,12 @@
+services:
+  gitlabce:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlabce
+    ports:
+      - "80:80"
+      - "443:443"
+      - "22:22"
+    volumes:
+      - /opt/stacks/gitlabce/data/etc_gitlab:/etc/gitlab
+      - /opt/stacks/gitlabce/data/var_log_gitlab:/var/log/gitlab
+      - /opt/stacks/gitlabce/data/var_opt_gitlab:/var/opt/gitlab

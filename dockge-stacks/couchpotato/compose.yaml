@@ -1,0 +1,11 @@
+services:
+  couchpotato:
+    image: linuxserver/couchpotato:latest
+    container_name: couchpotato
+    ports:
+      - "5050:5050"
+    volumes:
+      - /opt/stacks/couchpotato/data:/config
+      - /portainer/Downloads:/downloads
+      - /portainer/Movies:/movies
+    restart: unless-stopped

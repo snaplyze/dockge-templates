@@ -1,0 +1,9 @@
+services:
+  urlwatch:
+    image: mediadepot/urlwatch:master
+    container_name: urlwatch
+    ports:
+      - "8081:8081"
+    volumes:
+      - /opt/mediadepot/apps/urlwatch:/srv/urlwatch/config
+      - /etc/localtime:/etc/localtime:ro

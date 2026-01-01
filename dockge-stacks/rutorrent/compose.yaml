@@ -1,0 +1,12 @@
+services:
+  rutorrent:
+    image: linuxserver/rutorrent:latest
+    container_name: rutorrent
+    ports:
+      - "80:80"
+      - "51413:51413"
+      - "6881:6881"
+    volumes:
+      - /opt/stacks/rutorrent/data:/config
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

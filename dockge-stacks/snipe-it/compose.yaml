@@ -1,0 +1,9 @@
+services:
+  snipe-it:
+    image: linuxserver/snipe-it:latest
+    container_name: snipe-it
+    ports:
+      - "8080:80"
+    volumes:
+      - /volume1/docker/snipe-it/config:/config
+    restart: unless-stopped

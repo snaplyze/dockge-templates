@@ -1,0 +1,11 @@
+services:
+  tvheadend:
+    image: linuxserver/tvheadend:latest
+    container_name: tvheadend
+    ports:
+      - "9981:9981"
+      - "9982:9982"
+    volumes:
+      - /opt/stacks/tvheadend/data:/config
+      - /opt/stacks/tvheadend/data/recordings:/recordings
+    restart: unless-stopped

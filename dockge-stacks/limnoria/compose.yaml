@@ -1,0 +1,9 @@
+services:
+  limnoria:
+    image: linuxserver/limnoria:latest
+    container_name: limnoria
+    ports:
+      - "8080:8080"
+    volumes:
+      - /volume1/docker/limnoria/config:/config
+    restart: unless-stopped

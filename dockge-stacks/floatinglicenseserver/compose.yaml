@@ -1,0 +1,10 @@
+services:
+  floatinglicenseserver:
+    image: softingindustrial/floating-license-server:latest
+    container_name: floatinglicenseserver
+    ports:
+      - "6200:6200"
+    volumes:
+      - /opt/stacks/floatinglicenseserver/data/licsrv_licenses:/licsrv/licenses
+    stdin_open: true
+    tty: true

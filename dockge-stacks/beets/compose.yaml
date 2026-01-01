@@ -1,0 +1,11 @@
+services:
+  beets:
+    image: linuxserver/beets:latest
+    container_name: beets
+    ports:
+      - "8337:8337"
+    volumes:
+      - /opt/stacks/beets/data:/config
+      - /portainer/Downloads:/downloads
+      - /portainer/Music:/music
+    restart: unless-stopped

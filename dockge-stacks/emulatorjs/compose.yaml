@@ -1,0 +1,12 @@
+services:
+  emulatorjs:
+    image: linuxserver/emulatorjs:latest
+    container_name: emulatorjs
+    ports:
+      - "3000:3000"
+      - "80:80"
+      - "4001:4001"
+    volumes:
+      - /volume1/docker/emulatorjs/config:/config
+      - /volume1/docker/emulatorjs/data:/data
+    restart: unless-stopped

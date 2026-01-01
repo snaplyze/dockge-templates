@@ -1,0 +1,9 @@
+services:
+  commandbox:
+    image: ortussolutions/commandbox:latest
+    container_name: commandbox
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      - CFENGINE=lucee@4.5

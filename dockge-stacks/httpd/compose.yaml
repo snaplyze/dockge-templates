@@ -1,0 +1,8 @@
+services:
+  httpd:
+    image: httpd:latest
+    container_name: httpd
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/httpd/data/usr_local_apache2_htdocs:/usr/local/apache2/htdocs/

@@ -1,0 +1,9 @@
+services:
+  gotify:
+    image: gotify/server-arm7:latest
+    container_name: gotify
+    ports:
+      - "9008:80"
+    volumes:
+      - /opt/stacks/gotify/data/app_data:/app/data
+    restart: unless-stopped

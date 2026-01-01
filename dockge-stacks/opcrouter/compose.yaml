@@ -1,0 +1,12 @@
+services:
+  opcrouter:
+    image: opcrouter/runtime:latest
+    container_name: opcrouter
+    ports:
+      - "49429:49429"
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - /opt/stacks/opcrouter/data/data_database:/data/database
+      - /opt/stacks/opcrouter/data/inray:/inray
+      - /opt/stacks/opcrouter/data/var_log_opcrouter:/var/log/opcrouter

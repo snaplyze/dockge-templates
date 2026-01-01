@@ -1,0 +1,9 @@
+services:
+  foundryvtt:
+    image: felddy/foundryvtt:release
+    container_name: foundryvtt
+    ports:
+      - "30000:30000"
+    volumes:
+      - /opt/stacks/foundryvtt/data:/data
+    restart: unless-stopped

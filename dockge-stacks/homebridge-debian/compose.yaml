@@ -1,0 +1,9 @@
+services:
+  homebridge-debian:
+    image: homebridge/homebridge:ubuntu-arm32v7
+    container_name: homebridge-debian
+    volumes:
+      - /opt/stacks/homebridge-debian/data/homebridge:/homebridge
+    restart: unless-stopped
+    privileged: true
+    network_mode: host

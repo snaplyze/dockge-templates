@@ -1,0 +1,9 @@
+services:
+  cratedb:
+    image: crate:latest
+    container_name: cratedb
+    ports:
+      - "4200:4200"
+      - "4300:4300"
+    volumes:
+      - /opt/stacks/cratedb/data/data:/data

@@ -1,0 +1,9 @@
+services:
+  mealie:
+    image: hkotel/mealie:v0.4.3
+    container_name: mealie
+    ports:
+      - "9925:9000"
+    volumes:
+      - /opt/stacks/mealie/data/app_data:/app/data
+    restart: unless-stopped

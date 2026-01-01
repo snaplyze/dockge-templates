@@ -1,0 +1,9 @@
+services:
+  nuts:
+    image: upshift/nut-upsd
+    container_name: nuts
+    ports:
+      - "3493:3493"
+    volumes:
+      - /opt/stacks/nuts/data/app:/app
+    restart: always

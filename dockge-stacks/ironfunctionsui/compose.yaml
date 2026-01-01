@@ -1,0 +1,9 @@
+services:
+  ironfunctionsui:
+    image: iron/functions-ui:latest
+    container_name: ironfunctionsui
+    ports:
+      - "4000:4000"
+    volumes:
+      - /opt/stacks/ironfunctionsui/data/app_data:/app/data
+    privileged: true

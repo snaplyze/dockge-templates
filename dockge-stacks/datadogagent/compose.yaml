@@ -1,0 +1,8 @@
+services:
+  datadogagent:
+    image: datadog/agent:latest
+    container_name: datadogagent
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+      - /proc:/host/proc:ro

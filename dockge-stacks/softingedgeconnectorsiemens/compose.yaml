@@ -1,0 +1,4 @@
+services:
+  softingedgeconnectorsiemens:
+    image: 
+    container_name: softingedgeconnectorsiemens

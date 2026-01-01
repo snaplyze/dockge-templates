@@ -1,0 +1,18 @@
+services:
+  adguard:
+    image: adguard/adguardhome:latest
+    container_name: adguard
+    ports:
+      - "53:53"
+      - "53:53"
+      - "67:67"
+      - "68:68"
+      - "68:68"
+      - "80:80"
+      - "443:443"
+      - "853:853"
+      - "3000:3000"
+    volumes:
+      - /portainer/Files/AppData/Adguard/Workdir:/opt/adguardhome/work
+      - /portainer/Files/AppData/Adguard/Conf:/opt/adguardhome/conf
+    restart: unless-stopped

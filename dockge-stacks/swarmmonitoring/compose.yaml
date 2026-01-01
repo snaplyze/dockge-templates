@@ -1,0 +1,4 @@
+services:
+  swarmmonitoring:
+    image: 
+    container_name: swarmmonitoring

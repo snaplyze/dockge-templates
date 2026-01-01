@@ -1,0 +1,7 @@
+services:
+  rclone:
+    image: mediadepot/rclone:latest
+    container_name: rclone
+    volumes:
+      - /opt/mediadepot/apps/rclone:/srv/rclone/config
+      - /opt/mediadepot/apps:/mnt/data

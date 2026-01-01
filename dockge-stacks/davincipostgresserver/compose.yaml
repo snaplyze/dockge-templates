@@ -1,0 +1,9 @@
+services:
+  davincipostgresserver:
+    image: postgres:13
+    container_name: davincipostgresserver
+    ports:
+      - "5432:5432"
+    volumes:
+      - /opt/stacks/davincipostgresserver/data/lib:/var/lib/postgresql/data
+    restart: unless-stopped

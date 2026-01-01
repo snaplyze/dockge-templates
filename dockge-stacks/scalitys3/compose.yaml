@@ -1,0 +1,9 @@
+services:
+  scalitys3:
+    image: scality/s3server
+    container_name: scalitys3
+    ports:
+      - "8000:8000"
+    volumes:
+      - /opt/stacks/scalitys3/data/usr_src_app_localData:/usr/src/app/localData
+      - /opt/stacks/scalitys3/data/usr_src_app_localMetadata:/usr/src/app/localMetadata

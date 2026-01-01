@@ -1,0 +1,7 @@
+services:
+  passky-client:
+    image: rabbitcompany/passky-client:latest
+    container_name: passky-client
+    ports:
+      - "8081:80"
+    restart: unless-stopped

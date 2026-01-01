@@ -1,0 +1,13 @@
+services:
+  airsonic-advanced:
+    image: linuxserver/airsonic-advanced:latest
+    container_name: airsonic-advanced
+    ports:
+      - "4040:4040"
+    volumes:
+      - /volume1/docker/airsonic-advanced/config:/config
+      - /volume1/docker/airsonic-advanced/music:/music
+      - /volume1/docker/airsonic-advanced/playlists:/playlists
+      - /volume1/docker/airsonic-advanced/podcasts:/podcasts
+      - /volume1/docker/airsonic-advanced/media:/media
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  chowdown:
+    image: gregyankovoy/chowdown:latest
+    container_name: chowdown
+    ports:
+      - "4000:4000"
+    volumes:
+      - /opt/stacks/chowdown/data:/config
+    restart: unless-stopped

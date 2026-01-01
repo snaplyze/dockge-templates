@@ -1,0 +1,10 @@
+services:
+  foldingathome:
+    image: linuxserver/foldingathome:latest
+    container_name: foldingathome
+    ports:
+      - "7396:7396"
+      - "36330:36330"
+    volumes:
+      - /volume1/docker/foldingathome/config:/config
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  flame-dashboard:
+    image: pawelmalak/flame
+    container_name: flame-dashboard
+    ports:
+      - "5005:5005"
+    volumes:
+      - /opt/stacks/flame-dashboard/data/app_data:/app/data
+    restart: unless-stopped

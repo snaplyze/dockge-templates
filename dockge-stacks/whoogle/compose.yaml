@@ -1,0 +1,9 @@
+services:
+  whoogle:
+    image: benbusby/whoogle-search:latest
+    container_name: whoogle
+    ports:
+      - "5001:5000"
+    volumes:
+      - /opt/stacks/whoogle/data:/config
+    restart: unless-stopped

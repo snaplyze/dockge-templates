@@ -1,0 +1,12 @@
+services:
+  libresonic:
+    image: linuxserver/libresonic:latest
+    container_name: libresonic
+    ports:
+      - "4040:4040"
+    volumes:
+      - /opt/stacks/libresonic/data/music:/music
+      - /opt/stacks/libresonic/data/playlists:/playlists
+      - /opt/stacks/libresonic/data/podcasts:/podcasts
+      - /opt/stacks/libresonic/data/media:/media
+      - /opt/stacks/libresonic/data/config:/config

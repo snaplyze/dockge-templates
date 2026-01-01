@@ -1,0 +1,8 @@
+services:
+  solr:
+    image: solr:latest
+    container_name: solr
+    ports:
+      - "8983:8983"
+    volumes:
+      - /opt/stacks/solr/data/opt_solr_mydata:/opt/solr/mydata

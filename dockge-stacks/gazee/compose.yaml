@@ -1,0 +1,9 @@
+services:
+  gazee:
+    image: linuxserver/gazee:latest
+    container_name: gazee
+    volumes:
+      - /opt/stacks/gazee/data:/config
+      - /portainer/Comics:/comics
+      - /portainer/Files/AppData/Gazee:/mylar
+    restart: unless-stopped

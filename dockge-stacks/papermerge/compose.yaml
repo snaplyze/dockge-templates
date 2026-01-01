@@ -1,0 +1,10 @@
+services:
+  papermerge:
+    image: linuxserver/papermerge:latest
+    container_name: papermerge
+    ports:
+      - "8000:8000"
+    volumes:
+      - /volume1/docker/papermerge/config:/config
+      - /volume1/docker/papermerge/data:/data
+    restart: unless-stopped

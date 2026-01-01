@@ -1,0 +1,10 @@
+services:
+  letsencryptswag:
+    image: linuxserver/swag:latest
+    container_name: letsencryptswag
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /opt/stacks/letsencryptswag/data:/config
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+services:
+  grafana:
+      image: grafana/grafana:latest
+      ports:
+        - 3023:3000 ##changed from 3000 to 3023 to decrease possibility of conflict on a system that 3000 is already occupied
+      restart: unless-stopped
+      volumes:
+        - /opt/stacks/grafana/data:/var/lib/grafana
+      user: "0"
+##With this one we install Latest Grafana which in December 13th 2022 is 9.3.1

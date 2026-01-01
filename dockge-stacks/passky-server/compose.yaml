@@ -1,0 +1,9 @@
+services:
+  passky-server:
+    image: rabbitcompany/passky-server:latest
+    container_name: passky-server
+    ports:
+      - "8080:80"
+    volumes:
+      - /portainer/Files/AppData/Passky-Server:/var/www/html/databases
+    restart: unless-stopped

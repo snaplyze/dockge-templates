@@ -1,0 +1,9 @@
+services:
+  code-server:
+    image: linuxserver/code-server:latest
+    container_name: code-server
+    ports:
+      - "8443:8443"
+    volumes:
+      - /opt/stacks/code-server/data:/config
+    restart: unless-stopped

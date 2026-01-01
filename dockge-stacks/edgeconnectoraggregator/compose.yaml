@@ -1,0 +1,11 @@
+services:
+  edgeconnectoraggregator:
+    image: softingindustrial/edgeaggregator
+    container_name: edgeconnectoraggregator
+    ports:
+      - "443:443"
+      - "8099:8099"
+      - "4897:4897"
+    volumes:
+      - /opt/stacks/edgeconnectoraggregator/data/config:/config
+      - /opt/stacks/edgeconnectoraggregator/data/mqtt:/mqtt

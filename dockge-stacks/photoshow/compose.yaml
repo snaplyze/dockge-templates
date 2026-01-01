@@ -1,0 +1,11 @@
+services:
+  photoshow:
+    image: linuxserver/photoshow:latest
+    container_name: photoshow
+    ports:
+      - "80:80"
+    volumes:
+      - /portainer/Pictures:/Pictures
+      - /portainer/Files/AppData/Photoshow/Thumbs:/Thumbs
+      - /opt/stacks/photoshow/data:/config
+    restart: unless-stopped

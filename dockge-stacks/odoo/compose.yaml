@@ -1,0 +1,9 @@
+services:
+  odoo:
+    image: odoo:latest
+    container_name: odoo
+    ports:
+      - "8069:8069"
+    volumes:
+      - /opt/stacks/odoo/data/var_lib_odoo:/var/lib/odoo
+      - /opt/stacks/odoo/data/mnt_extra-addons:/mnt/extra-addons

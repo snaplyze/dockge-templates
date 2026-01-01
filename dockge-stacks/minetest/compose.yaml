@@ -1,0 +1,9 @@
+services:
+  minetest:
+    image: linuxserver/minetest:latest
+    container_name: minetest
+    ports:
+      - "30000:30000"
+    volumes:
+      - /opt/stacks/minetest/data/config_.minetest:/config/.minetest
+    restart: unless-stopped

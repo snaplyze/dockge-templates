@@ -1,0 +1,10 @@
+services:
+  davos:
+    image: linuxserver/davos:latest
+    container_name: davos
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/davos/data:/config
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

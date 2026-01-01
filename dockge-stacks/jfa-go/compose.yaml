@@ -1,0 +1,12 @@
+services:
+  jfa-go:
+    image: hrfee/jfa-go:latest
+    container_name: jfa-go
+    ports:
+      - "8056:8056"
+    volumes:
+      - /opt/stacks/jfa-go/data/jf:/jf
+      - /opt/stacks/jfa-go/data:/data
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    network_mode: bridge

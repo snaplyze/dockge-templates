@@ -1,0 +1,9 @@
+services:
+  dashmachine:
+    image: rmountjoy/dashmachine:latest
+    container_name: dashmachine
+    ports:
+      - "5000:5000"
+    volumes:
+      - /opt/stacks/dashmachine/data/dashmachine_dashmachine_user_data:/dashmachine/dashmachine/user_data
+    restart: unless-stopped

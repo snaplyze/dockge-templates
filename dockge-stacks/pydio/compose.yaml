@@ -1,0 +1,10 @@
+services:
+  pydio:
+    image: linuxserver/pydio:latest
+    container_name: pydio
+    ports:
+      - "443:443"
+    volumes:
+      - /opt/stacks/pydio/data:/config
+      - /portainer/Files/AppData/Pydio:/data
+    restart: unless-stopped

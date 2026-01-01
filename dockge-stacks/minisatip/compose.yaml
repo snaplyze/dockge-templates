@@ -1,0 +1,9 @@
+services:
+  minisatip:
+    image: linuxserver/minisatip:latest
+    container_name: minisatip
+    ports:
+      - "8875:8875"
+      - "554:554"
+      - "1900:1900"
+    restart: unless-stopped

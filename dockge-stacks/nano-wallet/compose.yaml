@@ -1,0 +1,7 @@
+services:
+  nano-wallet:
+    image: linuxserver/nano-wallet:latest
+    container_name: nano-wallet
+    ports:
+      - "80:80"
+    restart: unless-stopped

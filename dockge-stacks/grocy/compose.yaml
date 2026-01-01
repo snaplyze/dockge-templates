@@ -1,0 +1,9 @@
+services:
+  grocy:
+    image: linuxserver/grocy:latest
+    container_name: grocy
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/grocy/data:/config
+    restart: unless-stopped

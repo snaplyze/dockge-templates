@@ -1,0 +1,11 @@
+services:
+  audiobookshelf:
+    container_name: audiobookshelf
+    image: ghcr.io/advplyr/audiobookshelf
+    ports:
+      - 13378:80
+    volumes:
+      - /opt/stacks/audiobookshelf/data:/audiobooks
+      - /opt/stacks/audiobookshelf/data:/podcasts
+      - /opt/stacks/audiobookshelf/data:/metadata
+      - /opt/stacks/audiobookshelf/data:/config

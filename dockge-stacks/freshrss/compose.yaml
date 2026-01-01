@@ -1,0 +1,9 @@
+services:
+  freshrss:
+    image: linuxserver/freshrss:latest
+    container_name: freshrss
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/freshrss/data:/config
+    restart: unless-stopped

@@ -1,0 +1,21 @@
+services:
+  droppy:
+    image: silverwind/droppy:latest
+    container_name: droppy
+    ports:
+      - "8989:8989"
+    volumes:
+      - /media/storage/tvshows:/files/tvshows
+      - /media/storage/movies:/files/movies
+      - /media/storage/music:/files/music
+      - /media/storage/photos:/files/photos
+      - /media/storage/ebooks:/files/ebooks
+      - /media/storage/documents:/files/documents
+      - /media/storage/software:/files/software
+      - /media/storage/downloads:/files/downloads
+      - /media/temp/blackhole:/files/blackhole
+      - /media/temp/processing:/files/processing
+      - /opt/mediadepot/apps/droppy:/config
+    environment:
+      - GID=15000
+      - UID=15000

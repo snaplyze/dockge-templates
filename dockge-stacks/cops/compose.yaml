@@ -1,0 +1,10 @@
+services:
+  cops:
+    image: linuxserver/cops:latest
+    container_name: cops
+    ports:
+      - "80:80"
+    volumes:
+      - /portainer/Books:/books
+      - /opt/stacks/cops/data:/config
+    restart: unless-stopped

@@ -1,0 +1,12 @@
+services:
+  sonarr:
+    image: hotio/sonarr:release
+    container_name: sonarr
+    ports:
+      - "8989:8989"
+    volumes:
+      - /opt/stacks/sonarr/data:/config
+      - /dev/rtc:/dev/rtc
+      - /portainer/TV:/tv
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

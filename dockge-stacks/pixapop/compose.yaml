@@ -1,0 +1,10 @@
+services:
+  pixapop:
+    image: linuxserver/pixapop:latest
+    container_name: pixapop
+    ports:
+      - "80:80"
+    volumes:
+      - /volume1/docker/pixapop/config:/config
+      - /volume1/docker/pixapop/photos:/photos
+    restart: unless-stopped

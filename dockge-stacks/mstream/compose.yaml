@@ -1,0 +1,10 @@
+services:
+  mstream:
+    image: linuxserver/mstream:latest
+    container_name: mstream
+    ports:
+      - "3000:3000"
+    volumes:
+      - /opt/stacks/mstream/data:/config
+      - /portainer/Downloads:/music
+    restart: unless-stopped

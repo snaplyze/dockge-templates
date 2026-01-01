@@ -1,0 +1,10 @@
+services:
+  cloudcmd:
+    image: coderaiser/cloudcmd
+    container_name: cloudcmd
+    ports:
+      - "8000:8000"
+    volumes:
+      - /opt/mediadepot/apps:/media/host/opt/mediadepot
+      - /media/storage:/media/host/media/storage
+      - /media/temp:/media/host/media/temp

@@ -1,0 +1,8 @@
+services:
+  ldap-auth:
+    image: linuxserver/ldap-auth:latest
+    container_name: ldap-auth
+    ports:
+      - "8888:8888"
+      - "9000:9000"
+    restart: unless-stopped

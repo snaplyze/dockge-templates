@@ -1,0 +1,12 @@
+services:
+  eclipse-mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: eclipse-mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - /opt/stacks/eclipse-mosquitto/data/mosquitto_config:/mosquitto/config
+      - /opt/stacks/eclipse-mosquitto/data/mosquitto_data:/mosquitto/data
+      - /opt/stacks/eclipse-mosquitto/data/mosquitto_log:/mosquitto/log
+    restart: unless-stopped

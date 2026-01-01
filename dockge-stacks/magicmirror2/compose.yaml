@@ -1,0 +1,12 @@
+services:
+  magicmirror2:
+    image: karsten13/magicmirror:latest
+    container_name: magicmirror2
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/magicmirror2/data/opt_magic_mirror_config:/opt/magic_mirror/config
+      - /opt/stacks/magicmirror2/data/opt_magic_mirror_modules:/opt/magic_mirror/modules
+      - /opt/stacks/magicmirror2/data/opt_magic_mirror_css:/opt/magic_mirror/css
+    restart: unless-stopped
+    command: "/bin/bash -c "npm run server" && exit 777"

@@ -1,0 +1,10 @@
+services:
+  oled_stats:
+    image: mklements/oled_stats:latest
+    container_name: oled_stats
+    volumes:
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
+    restart: unless-stopped
+    privileged: true
+    network_mode: host

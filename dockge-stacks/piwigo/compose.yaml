@@ -1,0 +1,9 @@
+services:
+  piwigo:
+    image: linuxserver/piwigo:latest
+    container_name: piwigo
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/piwigo/data:/config
+    restart: unless-stopped

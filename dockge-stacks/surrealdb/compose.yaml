@@ -1,0 +1,10 @@
+services:
+  surrealdb:
+    image: surrealdb/surrealdb:latest
+    container_name: surrealdb
+    ports:
+      - "8020:8000"
+    volumes:
+      - /opt/stacks/surrealdb/data:/data
+    restart: unless-stopped
+    command: "start --user ${SDB_USERNAME} --pass ${SDB_PASSWORD} file:/data/database.db"

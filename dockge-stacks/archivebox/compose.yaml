@@ -1,0 +1,9 @@
+services:
+  archivebox:
+    image: archivebox/archivebox:latest
+    container_name: archivebox
+    ports:
+      - "8002:8000"
+    volumes:
+      - /opt/stacks/archivebox/data:/data
+    restart: unless-stopped

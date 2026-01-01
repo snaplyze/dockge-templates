@@ -1,0 +1,8 @@
+services:
+  daapd:
+    image: linuxserver/daapd:latest
+    container_name: daapd
+    volumes:
+      - /opt/stacks/daapd/data:/config
+      - /portainer/Music:/music
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+services:
+  lidarr:
+    image: hotio/lidarr:release
+    container_name: lidarr
+    ports:
+      - "8686:8686"
+    volumes:
+      - /opt/stacks/lidarr/data:/config
+      - /portainer/Downloads:/downloads
+      - /portainer/Music:/music
+    restart: unless-stopped

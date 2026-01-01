@@ -1,0 +1,10 @@
+services:
+  musicbrainz:
+    image: linuxserver/musicbrainz:latest
+    container_name: musicbrainz
+    ports:
+      - "5000:5000"
+    volumes:
+      - /opt/stacks/musicbrainz/data:/config
+      - /portainer/Files/AppData/MusicBrainz:/data
+    restart: unless-stopped

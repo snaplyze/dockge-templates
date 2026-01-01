@@ -1,0 +1,10 @@
+services:
+  influxdb1810:
+    image: influxdb:1.8.10
+    container_name: influxdb1810
+    ports:
+      - "8086:8086"
+    volumes:
+      - /opt/stacks/influxdb1810/data/lib:/var/lib/influxdb
+      - /opt/stacks/influxdb1810/data/etc_influxdb:/etc/influxdb
+    restart: unless-stopped

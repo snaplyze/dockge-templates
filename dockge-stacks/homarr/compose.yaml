@@ -1,0 +1,14 @@
+services:
+  homarr:
+    container_name: homarr
+    image: ghcr.io/ajnart/homarr:latest
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Athens
+      - DEFAULT_COLOR_SCHEME=dark
+    volumes:
+      - /opt/stacks/homarr/data:/app/data/configs
+      - /opt/stacks/homarr/data:/app/public/icons
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 7575:7575

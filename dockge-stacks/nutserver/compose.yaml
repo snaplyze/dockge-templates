@@ -1,0 +1,7 @@
+services:
+  nutserver:
+    image: instantlinux/nut-upsd:latest
+    container_name: nutserver
+    ports:
+      - "3493:3493"
+    restart: unless-stopped

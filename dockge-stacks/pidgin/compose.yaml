@@ -1,0 +1,9 @@
+services:
+  pidgin:
+    image: linuxserver/pidgin:latest
+    container_name: pidgin
+    ports:
+      - "3000:3000"
+    volumes:
+      - /volume1/docker/pidgin/config:/config
+    restart: unless-stopped

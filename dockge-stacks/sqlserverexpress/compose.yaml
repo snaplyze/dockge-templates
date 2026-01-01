@@ -1,0 +1,10 @@
+services:
+  sqlserverexpress:
+    image: microsoft/mssql-server-windows-express:latest
+    container_name: sqlserverexpress
+    ports:
+      - "1433:1433"
+    volumes:
+      - /opt/stacks/sqlserverexpress/data/C:_temp:C:/temp/
+    environment:
+      - ACCEPT_EULA=Y

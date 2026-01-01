@@ -1,0 +1,9 @@
+services:
+  kanzi:
+    image: linuxserver/kanzi:latest
+    container_name: kanzi
+    ports:
+      - "8000:8000"
+    volumes:
+      - /volume1/docker/kanzi/config:/config
+    restart: unless-stopped

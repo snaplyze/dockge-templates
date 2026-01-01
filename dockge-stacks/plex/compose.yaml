@@ -1,0 +1,15 @@
+services:
+  plex:
+    image: linuxserver/plex:latest
+    container_name: plex
+    volumes:
+      - /opt/mediadepot/apps/plex:/config
+      - /media/storage/tvshows:/data/tvshows
+      - /media/storage/movies:/data/movies
+      - /media/storage/music:/data/music
+      - /opt/stacks/plex/data/transcode:/transcode
+    environment:
+      - PGID=15000
+      - PUID=15000
+    privileged: true
+    network_mode: host

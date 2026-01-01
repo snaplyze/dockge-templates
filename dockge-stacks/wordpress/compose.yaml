@@ -1,0 +1,4 @@
+services:
+  wordpress:
+    image: 
+    container_name: wordpress

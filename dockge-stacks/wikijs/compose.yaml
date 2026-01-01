@@ -1,0 +1,10 @@
+services:
+  wikijs:
+    image: linuxserver/wikijs:latest
+    container_name: wikijs
+    ports:
+      - "3100:3000"
+    volumes:
+      - /opt/stacks/wikijs/data:/config
+      - /opt/stacks/wikijs/data:/data
+    restart: unless-stopped

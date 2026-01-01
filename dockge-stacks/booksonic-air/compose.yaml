@@ -1,0 +1,12 @@
+services:
+  booksonic-air:
+    image: linuxserver/booksonic-air:latest
+    container_name: booksonic-air
+    ports:
+      - "4040:4040"
+    volumes:
+      - /volume1/docker/booksonic-air/config:/config
+      - /volume1/docker/booksonic-air/audiobooks:/audiobooks
+      - /volume1/docker/booksonic-air/podcasts:/podcasts
+      - /volume1/docker/booksonic-air/othermedia:/othermedia
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  pwndrop:
+    image: linuxserver/pwndrop:latest
+    container_name: pwndrop
+    ports:
+      - "8080:8080"
+    volumes:
+      - /volume1/docker/pwndrop/config:/config
+    restart: unless-stopped

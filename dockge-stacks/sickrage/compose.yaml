@@ -1,0 +1,14 @@
+services:
+  sickrage:
+    image: linuxserver/sickrage:latest
+    container_name: sickrage
+    ports:
+      - "8081:8081"
+    volumes:
+      - /opt/mediadepot/apps/sickrage:/config
+      - /media/storage/downloads/tvshows:/downloads
+      - /media/storage/tvshows:/tv
+      - /media/temp/blackhole/tvshows:/blackhole
+    environment:
+      - PGID=15000
+      - PUID=15000

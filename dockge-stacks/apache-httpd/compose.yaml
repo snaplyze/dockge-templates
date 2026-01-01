@@ -1,0 +1,10 @@
+services:
+  apache-httpd:
+    image: httpd:latest
+    container_name: apache-httpd
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - /opt/stacks/apache-httpd/data/usr_local_apache2_htdocs:/usr/local/apache2/htdocs/
+    restart: unless-stopped

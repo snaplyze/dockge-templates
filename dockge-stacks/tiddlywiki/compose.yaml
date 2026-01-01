@@ -1,0 +1,9 @@
+services:
+  tiddlywiki:
+    image: mazzolino/tiddlywiki:latest
+    container_name: tiddlywiki
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/tiddlywiki/data/lib:/var/lib/tiddlywiki
+    restart: unless-stopped

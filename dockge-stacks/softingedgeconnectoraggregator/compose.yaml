@@ -1,0 +1,4 @@
+services:
+  softingedgeconnectoraggregator:
+    image: 
+    container_name: softingedgeconnectoraggregator

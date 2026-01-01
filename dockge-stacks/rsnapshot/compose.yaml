@@ -1,0 +1,11 @@
+services:
+  rsnapshot:
+    image: linuxserver/rsnapshot:latest
+    container_name: rsnapshot
+    ports:
+      - "80:80"
+    volumes:
+      - /volume1/docker/rsnapshot/config:/config
+      - /volume1/docker/rsnapshot/.snapshots:/.snapshots
+      - /volume1/docker/rsnapshot/data:/data
+    restart: unless-stopped

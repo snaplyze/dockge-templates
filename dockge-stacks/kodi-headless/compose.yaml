@@ -1,0 +1,10 @@
+services:
+  kodi-headless:
+    image: linuxserver/kodi-headless:latest
+    container_name: kodi-headless
+    ports:
+      - "8080:8080"
+      - "9777:9777"
+    volumes:
+      - /opt/stacks/kodi-headless/data:/config
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  kiwix-serve:
+    image: kiwix/kiwix-serve
+    volumes:
+      - /opt/stacks/kiwix/data:/data
+    ports:
+      - '78080:80'
+    command:
+      *.zim

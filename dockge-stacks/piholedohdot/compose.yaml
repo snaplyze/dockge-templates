@@ -1,0 +1,14 @@
+services:
+  piholedohdot:
+    image: oijkn/pihole-doh-dot:latest
+    container_name: piholedohdot
+    ports:
+      - "53:53"
+      - "53:53"
+      - "67:67"
+      - "1010:80"
+      - "4443:443"
+    volumes:
+      - /opt/stacks/piholedohdot/data/etc_pihole:/etc/pihole
+      - /opt/stacks/piholedohdot/data/etc_dnsmasq.d:/etc/dnsmasq.d
+    restart: unless-stopped

@@ -1,0 +1,8 @@
+services:
+  joomla:
+    image: joomla:latest
+    container_name: joomla
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/joomla/data/var_www_html:/var/www/html

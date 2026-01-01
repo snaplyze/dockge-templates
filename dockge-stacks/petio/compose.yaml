@@ -1,0 +1,27 @@
+services:
+  petio:
+    image: ghcr.io/petio-team/petio
+    container_name: petio
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Europe/Athens
+    volumes:
+      - /opt/stacks/petio/data:/config
+    ports:
+      - 7777:7777
+    restart: unless-stopped
+    depends_on:
+      - petio_mongo_db
+  petio_mongo_db:
+    image: mongo:4.4.18
+    container_name: petio_mongo_db
+    hostname: mongo
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Europe/Athens
+    volumes:
+      - /opt/stacks/petio/data:/data/configdb
+      - /opt/stacks/petio/data:/data/db
+    restart: unless-stopped

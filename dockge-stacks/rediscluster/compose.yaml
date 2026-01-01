@@ -1,0 +1,4 @@
+services:
+  rediscluster:
+    image: 
+    container_name: rediscluster

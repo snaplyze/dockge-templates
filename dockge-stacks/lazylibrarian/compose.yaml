@@ -1,0 +1,11 @@
+services:
+  lazylibrarian:
+    image: linuxserver/lazylibrarian:latest
+    container_name: lazylibrarian
+    ports:
+      - "5299:5299"
+    volumes:
+      - /opt/stacks/lazylibrarian/data/config:/config
+      - /opt/stacks/lazylibrarian/data/downloads:/downloads
+      - /opt/stacks/lazylibrarian/data/books:/books
+    restart: unless-stopped

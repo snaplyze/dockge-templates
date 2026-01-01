@@ -1,0 +1,6 @@
+services:
+  gaps:
+    image: housewrecker/gaps:latest
+    container_name: gaps
+    ports:
+      - "8484:8484"

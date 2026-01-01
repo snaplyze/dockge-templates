@@ -1,0 +1,8 @@
+services:
+  webgrabplus:
+    image: linuxserver/webgrabplus:latest
+    container_name: webgrabplus
+    volumes:
+      - /opt/stacks/webgrabplus/data:/config
+      - /portainer/Files/AppData/WebGrabPlus:/data
+    restart: unless-stopped

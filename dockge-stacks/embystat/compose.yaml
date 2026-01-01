@@ -1,0 +1,9 @@
+services:
+  embystat:
+    image: linuxserver/embystat:latest
+    container_name: embystat
+    ports:
+      - "6555:6555"
+    volumes:
+      - /opt/stacks/embystat/data:/config
+    restart: unless-stopped

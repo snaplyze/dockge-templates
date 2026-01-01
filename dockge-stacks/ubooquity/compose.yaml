@@ -1,0 +1,12 @@
+services:
+  ubooquity:
+    image: linuxserver/ubooquity:latest
+    container_name: ubooquity
+    ports:
+      - "2202:2202"
+      - "2203:2203"
+    volumes:
+      - /opt/stacks/ubooquity/data/books:/books
+      - /opt/stacks/ubooquity/data/comics:/comics
+      - /opt/stacks/ubooquity/data/config:/config
+    restart: unless-stopped

@@ -1,0 +1,4 @@
+services:
+  cockroachdb:
+    image: 
+    container_name: cockroachdb

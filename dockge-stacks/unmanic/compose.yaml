@@ -1,0 +1,11 @@
+services:
+  unmanic:
+    image: josh5/unmanic:latest
+    container_name: unmanic
+    ports:
+      - "8888:8888"
+    volumes:
+      - /opt/stacks/unmanic/data:/config
+      - /opt/stacks/unmanic/data/library:/library
+      - /opt/stacks/unmanic/data/tmp_unmanic:/tmp/unmanic
+    restart: unless-stopped

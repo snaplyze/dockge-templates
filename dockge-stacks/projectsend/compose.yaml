@@ -1,0 +1,10 @@
+services:
+  projectsend:
+    image: linuxserver/projectsend:latest
+    container_name: projectsend
+    ports:
+      - "80:80"
+    volumes:
+      - /portainer/Files/AppData/ProjectSend:/data
+      - /opt/stacks/projectsend/data:/config
+    restart: unless-stopped

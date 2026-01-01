@@ -1,0 +1,9 @@
+services:
+  audacity:
+    image: linuxserver/audacity:latest
+    container_name: audacity
+    ports:
+      - "3000:3000"
+    volumes:
+      - /volume1/docker/audacity/config:/config
+    restart: unless-stopped

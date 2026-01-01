@@ -1,0 +1,4 @@
+services:
+  softingedgeconnector840d:
+    image: 
+    container_name: softingedgeconnector840d

@@ -1,0 +1,10 @@
+services:
+  homarr-secured:
+    image: ghcr.io/ajnart/homarr:latest
+    container_name: homarr-secured
+    ports:
+      - "7575:7575"
+    volumes:
+      - /opt/stacks/homarr-secured/data/app_data_configs:/app/data/configs
+      - /opt/stacks/homarr-secured/data/app_public_icons:/app/public/icons
+    restart: unless-stopped

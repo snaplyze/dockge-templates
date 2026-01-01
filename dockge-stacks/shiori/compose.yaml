@@ -1,0 +1,14 @@
+services:
+  shiori:
+    image: ghcr.io/go-shiori/shiori
+    container_name: shiori-default
+    environment:
+      - TZ=Europe/Athens
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 8580:8080
+    restart: unless-stopped
+    volumes:
+      - /opt/stacks/shiori/data:/data
+

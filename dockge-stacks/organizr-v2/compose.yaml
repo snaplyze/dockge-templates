@@ -1,0 +1,9 @@
+services:
+  organizr-v2:
+    image: organizr/organizr:latest
+    container_name: organizr-v2
+    ports:
+      - "7171:80"
+    volumes:
+      - /opt/stacks/organizr-v2/data:/config
+    restart: unless-stopped

@@ -1,0 +1,13 @@
+services:
+  qdirstat:
+    image: jlesage/qdirstat:latest
+    container_name: qdirstat
+    ports:
+      - "5800:5800"
+    volumes:
+      - /opt/mediadepot/apps/qdirstat:/config
+      - /opt:/storage/opt
+      - /mnt:/storage/mnt
+    environment:
+      - PGID=15000
+      - PUID=15000

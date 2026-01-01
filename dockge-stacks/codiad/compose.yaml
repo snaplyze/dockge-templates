@@ -1,0 +1,9 @@
+services:
+  codiad:
+    image: linuxserver/codiad:latest
+    container_name: codiad
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/codiad/data:/config
+    restart: unless-stopped

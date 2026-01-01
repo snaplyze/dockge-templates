@@ -1,0 +1,7 @@
+services:
+  chrony-ntp:
+    image: cturra/ntp:latest
+    container_name: chrony-ntp
+    ports:
+      - "123:123"
+    restart: unless-stopped

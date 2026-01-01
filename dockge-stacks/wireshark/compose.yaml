@@ -1,0 +1,10 @@
+services:
+  wireshark:
+    image: linuxserver/wireshark:latest
+    container_name: wireshark
+    ports:
+      - "3000:3000"
+    volumes:
+      - /volume1/docker/wireshark/config:/config
+    restart: unless-stopped
+    network_mode: host

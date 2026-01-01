@@ -1,0 +1,11 @@
+services:
+  octoprint:
+    image: octoprint/octoprint:latest
+    container_name: octoprint
+    ports:
+      - "8051:80"
+    volumes:
+      - /opt/stacks/octoprint/data/octoprint:/octoprint
+      - /dev:/dev
+    restart: unless-stopped
+    privileged: true

@@ -1,0 +1,9 @@
+services:
+  librespeed:
+    image: linuxserver/librespeed:latest
+    container_name: librespeed
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/librespeed/data:/config
+    restart: unless-stopped

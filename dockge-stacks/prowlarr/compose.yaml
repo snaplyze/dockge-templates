@@ -1,0 +1,9 @@
+services:
+  prowlarr:
+    image: ghcr.io/linuxserver/prowlarr:develop
+    container_name: prowlarr
+    ports:
+      - "9696:9696"
+    volumes:
+      - /opt/stacks/prowlarr/data:/config
+    restart: unless-stopped

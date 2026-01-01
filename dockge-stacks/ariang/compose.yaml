@@ -1,0 +1,10 @@
+services:
+  ariang:
+    image: hurlenko/aria2-ariang:latest
+    container_name: ariang
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/ariang/data/aria2_conf:/aria2/conf
+      - /portainer/Downloads:/aria2/data
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  huginn:
+    image: huginn/huginn:latest
+    container_name: huginn
+    ports:
+      - "3000:3000"
+    volumes:
+      - /opt/stacks/huginn/data/lib:/var/lib/mysql
+    restart: unless-stopped

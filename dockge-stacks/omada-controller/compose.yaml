@@ -1,0 +1,16 @@
+services:
+  omada-controller:
+    image: mbentley/omada-controller:latest
+    container_name: omada-controller
+    ports:
+      - "8088:8088"
+      - "8043:8043"
+      - "27001:27001"
+      - "27002:27002"
+      - "29810:29810"
+      - "29811:29811"
+      - "29812:29812"
+      - "29813:29813"
+    volumes:
+      - /opt/stacks/omada-controller/data:/config
+    restart: unless-stopped

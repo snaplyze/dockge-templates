@@ -1,0 +1,9 @@
+services:
+  reactive-resume:
+    image: amruthpillai/reactive-resume:latest
+    container_name: reactive-resume
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/reactive-resume/data/usr_src_app:/usr/src/app
+    restart: unless-stopped

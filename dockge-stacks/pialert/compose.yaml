@@ -1,0 +1,9 @@
+services:
+  pialert:
+    image: jokobsk/pi.alert
+    container_name: pialert
+    ports:
+      - "20211:20211"
+    volumes:
+      - /opt/stacks/pialert/data:/config
+    restart: always

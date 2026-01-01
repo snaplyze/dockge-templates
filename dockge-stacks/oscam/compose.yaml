@@ -1,0 +1,10 @@
+services:
+  oscam:
+    image: linuxserver/oscam:latest
+    container_name: oscam
+    ports:
+      - "8888:8888"
+      - "10000:10000"
+    volumes:
+      - /opt/stacks/oscam/data:/config
+    restart: unless-stopped

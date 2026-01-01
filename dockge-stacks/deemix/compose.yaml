@@ -1,0 +1,10 @@
+services:
+  deemix:
+    image: registry.gitlab.com/bockiii/deemix-docker
+    container_name: deemix
+    ports:
+      - "6595:6595"
+    volumes:
+      - /opt/stacks/deemix/data:/config
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

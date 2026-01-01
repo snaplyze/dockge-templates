@@ -1,0 +1,7 @@
+services:
+  socks5-proxy:
+    image: serjs/go-socks5-proxy:latest
+    container_name: socks5-proxy
+    ports:
+      - "8080:8080"
+    restart: unless-stopped

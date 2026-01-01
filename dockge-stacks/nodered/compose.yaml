@@ -1,0 +1,13 @@
+services:
+  node-red:
+    image: nodered/node-red:latest
+    environment:
+      - TZ=Europe/Athens
+    ports:
+      - "1880:1880"
+    networks:
+      - node-red-net
+    volumes:
+      - /opt/stacks/nodered/data:/data
+networks:
+  node-red-net:

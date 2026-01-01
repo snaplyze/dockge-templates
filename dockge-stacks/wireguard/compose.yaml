@@ -1,0 +1,10 @@
+services:
+  wireguard:
+    image: linuxserver/wireguard:latest
+    container_name: wireguard
+    ports:
+      - "51820:51820"
+    volumes:
+      - /volume1/docker/wireguard/config:/config
+      - /lib/modules:/lib/modules
+    restart: unless-stopped

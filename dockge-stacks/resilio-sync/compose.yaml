@@ -1,0 +1,9 @@
+services:
+  resilio-sync:
+    image: linuxserver/resilio-sync:latest
+    container_name: resilio-sync
+    volumes:
+      - /opt/stacks/resilio-sync/data:/config
+      - /opt/stacks/resilio-sync/data/sync:/sync
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

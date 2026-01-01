@@ -1,0 +1,9 @@
+services:
+  scrutiny:
+    image: analogj/scrutiny:latest
+    container_name: scrutiny
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/mediadepot/apps/scrutiny:/scrutiny/config/
+      - /run/udev:/run/udev:ro

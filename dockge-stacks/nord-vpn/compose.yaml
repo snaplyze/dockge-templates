@@ -1,0 +1,8 @@
+services:
+  nord-vpn:
+    image: azinchen/nordvpn:latest
+    container_name: nord-vpn
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    privileged: true

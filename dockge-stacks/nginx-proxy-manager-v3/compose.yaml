@@ -1,0 +1,11 @@
+services:
+  nginx-proxy-manager-v3:
+    image: jc21/nginx-proxy-manager:v3
+    container_name: nginx-proxy-manager-v3
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    volumes:
+      - /opt/stacks/nginx-proxy-manager-v3/data:/data
+    restart: unless-stopped

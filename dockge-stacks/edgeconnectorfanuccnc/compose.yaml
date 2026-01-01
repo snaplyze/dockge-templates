@@ -1,0 +1,11 @@
+services:
+  edgeconnectorfanuccnc:
+    image: softingindustrial/edgeconnector-fanuc-cnc
+    container_name: edgeconnectorfanuccnc
+    ports:
+      - "443:443"
+      - "8099:8099"
+      - "4897:4897"
+    volumes:
+      - /opt/stacks/edgeconnectorfanuccnc/data/config:/config
+      - /opt/stacks/edgeconnectorfanuccnc/data/mqtt:/mqtt

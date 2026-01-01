@@ -1,0 +1,8 @@
+services:
+  syncserver:
+    image: mozilla/syncserver:latest
+    container_name: syncserver
+    ports:
+      - "5000:5000"
+    volumes:
+      - /opt/mediadepot/apps/syncserver:/data

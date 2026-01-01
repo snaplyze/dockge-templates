@@ -1,0 +1,12 @@
+services:
+  sabnzbd:
+    image: linuxserver/sabnzbd:latest
+    container_name: sabnzbd
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+    volumes:
+      - /opt/stacks/sabnzbd/data:/config
+      - /portainer/Downloads:/downloads
+      - /portainer/Downloads/incomplete:/incomplete-downloads
+    restart: unless-stopped

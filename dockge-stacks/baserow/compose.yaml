@@ -1,0 +1,16 @@
+services:
+  baserow:
+    image: baserow/baserow:latest
+    container_name: baserow
+    environment:
+      - TZ=Europe/Athens
+    volumes:
+      - /opt/stacks/baserow/data:/baserow/data
+    ports:
+      - 280:80  #changed from default 80
+      - 2443:443
+    restart: unless-stopped
+
+
+
+ 

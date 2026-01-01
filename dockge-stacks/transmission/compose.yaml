@@ -1,0 +1,12 @@
+services:
+  transmission:
+    image: linuxserver/transmission:latest
+    container_name: transmission
+    ports:
+      - "9091:9091"
+      - "51413:51413"
+    volumes:
+      - /opt/stacks/transmission/data:/config
+      - /portainer/Files/Downloads:/downloads
+      - /opt/stacks/transmission/data/watch:/watch
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+services:
+  radarr:
+    image: hotio/radarr:release
+    container_name: radarr
+    ports:
+      - "7878:7878"
+    volumes:
+      - /opt/stacks/radarr/data:/config
+      - /portainer/Downloads:/downloads
+      - /portainer/Movies:/movies
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+services:
+  qflood:
+    image: hotio/qflood:latest
+    container_name: qflood
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/qflood/data:/config
+      - /portainer/Downloads:/app/qBittorrent/downloads
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+services:
+  homeassistant:
+    image: linuxserver/homeassistant:latest
+    container_name: homeassistant
+    ports:
+      - "8123:8123"
+    volumes:
+      - /volume1/docker/homeassistant/config:/config
+    restart: unless-stopped
+    network_mode: host

@@ -1,0 +1,16 @@
+services:
+  pihole-unbound:
+    image: cbcrowe/pihole-unbound:latest
+    container_name: pihole-unbound
+    ports:
+      - "53:53"
+      - "53:53"
+      - "1010:80"
+      - "4443:443"
+    volumes:
+      - /opt/stacks/pihole-unbound/data/etc_pihole:/etc/pihole
+      - /opt/stacks/pihole-unbound/data/etc_dnsmasq.d:/etc/dnsmasq.d
+    environment:
+      - DNS1=127.0.0.1#5335
+      - DNS2=127.0.0.1#5335
+    restart: unless-stopped

@@ -1,0 +1,21 @@
+{
+    "base_path": "/opt/stacks",
+    "create_readme": true,
+    "create_env": true,
+    "skip_types": [],
+    "download_timeout": 10,
+    "custom_mappings": {
+        "vaultwarden": {
+            "/config": "/data"
+        },
+        "mysql": {
+            "/var/lib/mysql": "/data/mysql"
+        },
+        "postgresql": {
+            "/var/lib/postgresql/data": "/data/postgres"
+        },
+        "mongodb": {
+            "/data/db": "/data/mongo"
+        }
+    }
+}

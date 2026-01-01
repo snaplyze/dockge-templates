@@ -1,0 +1,10 @@
+services:
+  jdownloader:
+    image: jaymoulin/jdownloader:latest
+    container_name: jdownloader
+    ports:
+      - "3129:3129"
+    volumes:
+      - /opt/stacks/jdownloader/data/opt_JDownloader_app_cfg:/opt/JDownloader/app/cfg
+      - /portainer/Downloads:/opt/JDownloader/Downloads
+    restart: unless-stopped

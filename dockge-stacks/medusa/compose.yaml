@@ -1,0 +1,11 @@
+services:
+  medusa:
+    image: linuxserver/medusa:latest
+    container_name: medusa
+    ports:
+      - "8081:8081"
+    volumes:
+      - /opt/stacks/medusa/data:/config
+      - /portainer/TV:/tv
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

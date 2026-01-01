@@ -1,0 +1,8 @@
+services:
+  plone:
+    image: plone:latest
+    container_name: plone
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/plone/data/data:/data

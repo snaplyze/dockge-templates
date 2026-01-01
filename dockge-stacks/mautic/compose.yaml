@@ -1,0 +1,8 @@
+services:
+  mautic:
+    image: mautic/mautic:latest
+    container_name: mautic
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/mautic/data/var_www_html:/var/www/html

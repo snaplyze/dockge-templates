@@ -1,0 +1,10 @@
+services:
+  lychee:
+    image: linuxserver/lychee:latest
+    container_name: lychee
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/lychee/data:/config
+      - /portainer/Pictures:/pictures
+    restart: unless-stopped

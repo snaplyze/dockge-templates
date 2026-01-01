@@ -1,0 +1,10 @@
+services:
+  snapdrop:
+    image: linuxserver/snapdrop:latest
+    container_name: snapdrop
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /volume1/docker/snapdrop/config:/config
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+services:
+  mcmyadmin2:
+    image: linuxserver/mcmyadmin2:latest
+    container_name: mcmyadmin2
+    ports:
+      - "8080:8080"
+      - "25565:25565"
+    volumes:
+      - /opt/stacks/mcmyadmin2/data/minecraft:/minecraft
+    restart: unless-stopped

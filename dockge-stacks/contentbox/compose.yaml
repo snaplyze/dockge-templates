@@ -1,0 +1,14 @@
+services:
+  contentbox:
+    image: ortussolutions/contentbox:latest
+    container_name: contentbox
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    volumes:
+      - /opt/stacks/contentbox/data/data_contentbox_db:/data/contentbox/db
+      - /opt/stacks/contentbox/data/app_includes_shared_media:/app/includes/shared/media
+    environment:
+      - express=true
+      - install=true
+      - CFENGINE=lucee@4.5

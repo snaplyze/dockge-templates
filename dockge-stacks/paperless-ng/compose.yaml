@@ -1,0 +1,10 @@
+services:
+  paperless-ng:
+    image: linuxserver/paperless-ng:latest
+    container_name: paperless-ng
+    ports:
+      - "8000:8000"
+    volumes:
+      - /volume1/docker/paperless-ng/config:/config
+      - /volume1/docker/paperless-ng/data:/data
+    restart: unless-stopped

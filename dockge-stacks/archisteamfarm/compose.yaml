@@ -1,0 +1,11 @@
+services:
+  archisteamfarm:
+    image: justarchi/archisteamfarm:latest
+    container_name: archisteamfarm
+    ports:
+      - "1242:1242"
+    volumes:
+      - /opt/stacks/archisteamfarm/data/app_config:/app/config
+      - /opt/stacks/archisteamfarm/data/app_plugins_customplugins:/app/plugins/customplugins
+      - /opt/stacks/archisteamfarm/data/app_logs:/app/logs
+    restart: unless-stopped

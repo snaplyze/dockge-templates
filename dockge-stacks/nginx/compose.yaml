@@ -1,0 +1,10 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /opt/stacks/nginx/data/etc_nginx:/etc/nginx
+      - /opt/stacks/nginx/data/usr_share_nginx_html:/usr/share/nginx/html

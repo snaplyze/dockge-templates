@@ -1,0 +1,9 @@
+services:
+  bitwardenrs:
+    image: bitwardenrs/server:latest
+    container_name: bitwardenrs
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/bitwardenrs/data:/config
+    restart: unless-stopped

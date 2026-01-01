@@ -1,0 +1,10 @@
+services:
+  lldap:
+    image: nitnelave/lldap:stable-debian
+    container_name: lldap
+    ports:
+      - "3890:3890"
+      - "17170:17170"
+    volumes:
+      - /opt/stacks/lldap/data:/data
+    restart: unless-stopped

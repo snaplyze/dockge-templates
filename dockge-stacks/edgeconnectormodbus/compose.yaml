@@ -1,0 +1,8 @@
+services:
+  edgeconnectormodbus:
+    image: softingindustrial/edgeconnector-modbus:latest
+    container_name: edgeconnectormodbus
+    ports:
+      - "443:443"
+      - "8099:8099"
+      - "4897:4897"

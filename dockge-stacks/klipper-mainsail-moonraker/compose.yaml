@@ -1,0 +1,43 @@
+version: "3"
+services:
+  klipper:
+    hostname: klipper
+    image: mkuf/klipper:latest
+    devices:
+      - ${3D_PRINTER_DEVICE}:${3D_PRINTER_DEVICE}
+    volumes:
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/config/printer.cfg
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/logs
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/run
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/gcodes
+    restart: unless-stopped
+    networks:
+      - klipper
+
+  moonraker:
+    hostname: moonraker
+    image: mkuf/moonraker:latest
+    ports:
+      - "7125:7125"
+    volumes:
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/config/moonraker.conf
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/logs
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/run
+      - /opt/stacks/klipper-mainsail-moonraker/data:/opt/printer_data/gcodes
+    restart: unless-stopped
+    networks:
+      - klipper
+
+  mainsail:
+    hostname: mainsail
+    image: ghcr.io/mainsail-crew/mainsail:edge
+    ports:
+      - "4070:80"
+    volumes:
+      - /opt/stacks/klipper-mainsail-moonraker/data:/usr/share/nginx/html/config.json
+    restart: unless-stopped
+    networks:
+      - klipper
+
+networks:
+  klipper:

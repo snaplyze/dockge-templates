@@ -1,0 +1,10 @@
+services:
+  stirling-pdf:
+    image: frooodle/s-pdf:0.18.1
+    container_name: stirling-pdf
+    ports:
+      - "5417:8080"
+    volumes:
+      - /opt/stacks/stirling-pdf/data/configs:/configs
+      - /portainer/Files/AppData/Libraries/StirlingPDF/tessdata:/usr/share/tesseract-ocr/5/tessdata
+    restart: unless-stopped

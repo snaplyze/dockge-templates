@@ -1,0 +1,10 @@
+services:
+  nzbhydra2:
+    image: linuxserver/nzbhydra2:latest
+    container_name: nzbhydra2
+    ports:
+      - "5076:5076"
+    volumes:
+      - /opt/stacks/nzbhydra2/data:/config
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

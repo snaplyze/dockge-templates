@@ -1,0 +1,9 @@
+services:
+  tt-rss:
+    image: lunik1/tt-rss:latest
+    container_name: tt-rss
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/tt-rss/data:/config
+    restart: unless-stopped

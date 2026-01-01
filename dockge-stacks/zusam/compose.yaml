@@ -1,0 +1,9 @@
+services:
+  zusam:
+    image: zusam/zusam
+    container_name: zusam
+    ports:
+      - "4180:8080"
+    volumes:
+      - /opt/stacks/zusam/data/zusam_data:/zusam/data
+    restart: unless-stopped

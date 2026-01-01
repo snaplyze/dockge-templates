@@ -1,0 +1,4 @@
+services:
+  liveswitch:
+    image: 
+    container_name: liveswitch

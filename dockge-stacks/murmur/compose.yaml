@@ -1,0 +1,13 @@
+services:
+  murmur:
+    image: goofball222/murmur:latest
+    container_name: murmur
+    ports:
+      - "64738:64738"
+      - "64738:64738"
+    volumes:
+      - /etc/localtime:ro:/etc/localtime
+      - /portainer/Files/Config/Murmur:/opt/murmur/config
+      - /portainer/Files/Murmur/data:/opt/murmur/data
+      - /portainer/Files/Murmur/log:/opt/murmur/log
+    restart: unless-stopped

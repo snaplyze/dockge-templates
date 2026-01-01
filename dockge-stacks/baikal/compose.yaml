@@ -1,0 +1,13 @@
+services:
+  baikal:
+    image: ckulka/baikal:nginx
+    restart: always
+    ports:
+      - "8220:80"
+    volumes:
+      - /opt/stacks/baikal/data:/var/www/baikal/config
+      - /opt/stacks/baikal/data:/var/www/baikal/Specific
+
+volumes:
+  config:
+  data:

@@ -1,0 +1,9 @@
+services:
+  ffmpeg:
+    image: linuxserver/ffmpeg:latest
+    container_name: ffmpeg
+    ports:
+      - "80:80"
+    volumes:
+      - /volume1/docker/ffmpeg/config:/config
+    restart: unless-stopped

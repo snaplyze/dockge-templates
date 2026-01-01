@@ -1,0 +1,9 @@
+services:
+  phpmyadmin:
+    image: linuxserver/phpmyadmin:latest
+    container_name: phpmyadmin
+    ports:
+      - "80:80"
+    volumes:
+      - /volume1/docker/phpmyadmin/config:/config
+    restart: unless-stopped

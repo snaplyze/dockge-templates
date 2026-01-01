@@ -1,0 +1,4 @@
+services:
+  nextcloudstack:
+    image: 
+    container_name: nextcloudstack

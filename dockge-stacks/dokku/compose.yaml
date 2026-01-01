@@ -1,0 +1,11 @@
+services:
+  dokku:
+    image: dokku/dokku
+    container_name: dokku
+    ports:
+      - "22:22"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /opt/stacks/dokku/data/lib/dokku:/mnt/dokku
+      - /var/run/docker.sock:/var/run/docker.sock

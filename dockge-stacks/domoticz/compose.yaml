@@ -1,0 +1,11 @@
+services:
+  domoticz:
+    image: linuxserver/domoticz:latest
+    container_name: domoticz
+    ports:
+      - "1443:1443"
+      - "6144:6144"
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/domoticz/data:/config
+    restart: unless-stopped

@@ -1,0 +1,8 @@
+services:
+  deluge:
+    image: linuxserver/deluge:latest
+    container_name: deluge
+    volumes:
+      - /opt/stacks/deluge/data:/config
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

@@ -1,0 +1,10 @@
+services:
+  registrycache:
+    image: registry:latest
+    container_name: registrycache
+    ports:
+      - "5000:5000"
+    volumes:
+      - /opt/stacks/registrycache/data/var_lib_registry:/var/lib/registry
+    environment:
+      - REGISTRY_PROXY_REMOTEURL=https://registry-1.docker.io

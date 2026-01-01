@@ -1,0 +1,9 @@
+services:
+  webtop:
+    image: linuxserver/webtop:ubuntu-kde
+    container_name: webtop
+    ports:
+      - "3000:3000"
+    volumes:
+      - /opt/stacks/webtop/data:/config
+    restart: always

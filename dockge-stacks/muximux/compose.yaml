@@ -1,0 +1,9 @@
+services:
+  muximux:
+    image: linuxserver/muximux:latest
+    container_name: muximux
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/muximux/data:/config
+    restart: unless-stopped

@@ -1,0 +1,7 @@
+services:
+  netbox:
+    image: netboxcommunity/netbox:latest
+    container_name: netbox
+    ports:
+      - "8000:80"
+    restart: always

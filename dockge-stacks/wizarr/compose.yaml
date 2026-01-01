@@ -1,0 +1,9 @@
+services:
+  wizarr:
+    image: ghcr.io/wizarrrr/wizarr
+    container_name: wizarr
+    ports:
+      - "5690:5690"
+    volumes:
+      - /opt/mediadepot/apps/wizarr:/data/database
+      - /etc/localtime:/etc/localtime:ro

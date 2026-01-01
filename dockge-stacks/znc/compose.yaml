@@ -1,0 +1,9 @@
+services:
+  znc:
+    image: linuxserver/znc:latest
+    container_name: znc
+    ports:
+      - "6501:6501"
+    volumes:
+      - /opt/stacks/znc/data:/config
+    restart: unless-stopped

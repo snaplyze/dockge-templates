@@ -1,0 +1,14 @@
+services:
+  traefik:
+    image: traefik:latest
+    container_name: traefik
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/traefik/data/traefik.yml:/traefik.yml
+      - /opt/stacks/traefik/data/config.yml:/config.yml
+      - /opt/stacks/traefik/data/acme.json:/acme.json
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

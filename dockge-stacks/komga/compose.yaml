@@ -1,0 +1,12 @@
+services:
+  komga:
+    image: gotson/komga:latest
+    container_name: komga
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/komga/data/books:/books
+      - /opt/stacks/komga/data/comics:/comics
+      - /opt/stacks/komga/data/manga:/manga
+      - /opt/stacks/komga/data/config:/config
+    restart: unless-stopped

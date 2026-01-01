@@ -1,0 +1,11 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:s6
+    container_name: filebrowser
+    ports:
+      - "8082:80"
+    volumes:
+      - /portainer/Downloads:/srv
+      - /opt/stacks/filebrowser/data/database_filebrowser.db:/database/filebrowser.db
+      - /opt/stacks/filebrowser/data/config_settings.json:/config/settings.json
+    restart: unless-stopped

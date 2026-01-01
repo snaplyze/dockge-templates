@@ -1,0 +1,4 @@
+services:
+  microsoftomsagent:
+    image: 
+    container_name: microsoftomsagent

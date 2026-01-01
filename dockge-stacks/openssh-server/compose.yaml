@@ -1,0 +1,9 @@
+services:
+  openssh-server:
+    image: linuxserver/openssh-server:latest
+    container_name: openssh-server
+    ports:
+      - "2222:2222"
+    volumes:
+      - /volume1/docker/openssh-server/config:/config
+    restart: unless-stopped

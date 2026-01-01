@@ -1,0 +1,11 @@
+services:
+  deluge-openvpn:
+    image: sgtsquiggs/deluge-openvpn:latest
+    container_name: deluge-openvpn
+    ports:
+      - "8112:8112"
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /portainer/Downloads:/downloads
+      - /opt/stacks/deluge-openvpn/data:/config
+    restart: unless-stopped

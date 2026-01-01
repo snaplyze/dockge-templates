@@ -1,0 +1,11 @@
+services:
+  cloud9:
+    image: linuxserver/cloud9:latest
+    container_name: cloud9
+    ports:
+      - "8000:8000"
+    volumes:
+      - /volume1/docker/cloud9/config:/config
+      - /volume1/docker/cloud9/code:/code
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

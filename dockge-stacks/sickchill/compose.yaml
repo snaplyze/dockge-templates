@@ -1,0 +1,11 @@
+services:
+  sickchill:
+    image: linuxserver/sickchill:latest
+    container_name: sickchill
+    ports:
+      - "8081:8081"
+    volumes:
+      - /opt/stacks/sickchill/data:/config
+      - /portainer/Downloads:/downloads
+      - /portainer/TV:/tv
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    container_name: rabbitmq
+    ports:
+      - "5671:5671"
+      - "5672:5672"
+    volumes:
+      - /opt/stacks/rabbitmq/data/var_lib_rabbitmq:/var/lib/rabbitmq

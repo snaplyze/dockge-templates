@@ -1,0 +1,12 @@
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    ports:
+      - "6881:6881"
+      - "6881:6881"
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/qbittorrent/data:/config
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

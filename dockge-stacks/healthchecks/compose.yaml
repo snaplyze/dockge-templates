@@ -1,0 +1,9 @@
+services:
+  healthchecks:
+    image: linuxserver/healthchecks:latest
+    container_name: healthchecks
+    ports:
+      - "8000:8000"
+    volumes:
+      - /volume1/docker/healthchecks/config:/config
+    restart: unless-stopped

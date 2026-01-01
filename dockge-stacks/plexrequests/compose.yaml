@@ -1,0 +1,9 @@
+services:
+  plexrequests:
+    image: linuxserver/plexrequests:latest
+    container_name: plexrequests
+    ports:
+      - "3000:3000"
+    volumes:
+      - /opt/stacks/plexrequests/data:/config
+    restart: unless-stopped

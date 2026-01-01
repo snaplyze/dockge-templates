@@ -1,0 +1,9 @@
+services:
+  ironfunctionsapi:
+    image: iron/functions:latest
+    container_name: ironfunctionsapi
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/ironfunctionsapi/data/app_data:/app/data
+    privileged: true

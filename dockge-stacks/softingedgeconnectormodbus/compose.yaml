@@ -1,0 +1,4 @@
+services:
+  softingedgeconnectormodbus:
+    image: 
+    container_name: softingedgeconnectormodbus

@@ -1,0 +1,9 @@
+services:
+  metube:
+    image: alexta69/metube:latest
+    container_name: metube
+    ports:
+      - "8081:8081"
+    volumes:
+      - /portainer/Downloads:/downloads
+    restart: unless-stopped

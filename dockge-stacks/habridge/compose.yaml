@@ -1,0 +1,10 @@
+services:
+  habridge:
+    image: linuxserver/habridge:latest
+    container_name: habridge
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - /volume1/docker/habridge/config:/config
+    restart: unless-stopped

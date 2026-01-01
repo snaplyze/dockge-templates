@@ -1,0 +1,12 @@
+services:
+  duplicacy:
+    image: mediadepot/duplicacy:latest
+    container_name: duplicacy
+    ports:
+      - "3875:3875"
+    volumes:
+      - /opt/mediadepot/apps/duplicacy/config:/config
+      - /opt/mediadepot/apps/duplicacy/logs:/logs
+      - /opt/mediadepot/apps/duplicacy/cache:/cache
+      - /opt/mediadepot/apps/:/source/apps
+      - /media/storage/:/source/storage

@@ -1,0 +1,4 @@
+services:
+  softingedgeconnectorfanuccnc:
+    image: 
+    container_name: softingedgeconnectorfanuccnc

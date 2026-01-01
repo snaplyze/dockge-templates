@@ -1,0 +1,12 @@
+services:
+  emby:
+    image: linuxserver/emby:latest
+    container_name: emby
+    ports:
+      - "8096:8096"
+      - "8920:8920"
+    volumes:
+      - /opt/stacks/emby/data:/config
+      - /portainer/TV:/data/tvshows
+      - /portainer/Movies:/data/movies
+    restart: unless-stopped

@@ -1,0 +1,7 @@
+services:
+  sematext-agent:
+    image: sematext/sematext-agent-docker:latest
+    container_name: sematext-agent
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    privileged: true

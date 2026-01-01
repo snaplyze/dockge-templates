@@ -1,0 +1,11 @@
+services:
+  headphones:
+    image: linuxserver/headphones:latest
+    container_name: headphones
+    ports:
+      - "8181:8181"
+    volumes:
+      - /opt/stacks/headphones/data:/config
+      - /portainer/Downloads:/Downloads
+      - /portainer/Music:/music
+    restart: unless-stopped

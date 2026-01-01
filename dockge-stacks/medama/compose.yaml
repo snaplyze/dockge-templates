@@ -1,0 +1,9 @@
+services:
+    medama:
+        image: ghcr.io/medama-io/medama:latest
+        ports:
+            - "8010:8080"
+        volumes:
+            - /opt/stacks/medama/data:/app/data
+volumes:
+    medama-data:

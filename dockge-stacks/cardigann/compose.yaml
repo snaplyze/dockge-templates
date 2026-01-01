@@ -1,0 +1,11 @@
+services:
+  cardigann:
+    image: linuxserver/cardigann:latest
+    container_name: cardigann
+    ports:
+      - "5060:5060"
+    volumes:
+      - /opt/mediadepot/apps/cardigann:/config
+    environment:
+      - PGID=15000
+      - PUID=15000

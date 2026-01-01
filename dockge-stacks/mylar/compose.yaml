@@ -1,0 +1,11 @@
+services:
+  mylar:
+    image: linuxserver/mylar:latest
+    container_name: mylar
+    ports:
+      - "8090:8090"
+    volumes:
+      - /opt/stacks/mylar/data:/config
+      - /portainer/Downloads:/downloads
+      - /portainer/Comics:/comics
+    restart: unless-stopped

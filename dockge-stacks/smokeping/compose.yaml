@@ -1,0 +1,10 @@
+services:
+  smokeping:
+    image: linuxserver/smokeping:latest
+    container_name: smokeping
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/smokeping/data:/config
+      - /portainer/Files/AppData/Smokeping:/data
+    restart: unless-stopped

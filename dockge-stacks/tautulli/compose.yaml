@@ -1,0 +1,10 @@
+services:
+  tautulli:
+    image: linuxserver/tautulli:latest
+    container_name: tautulli
+    ports:
+      - "8181:8181"
+    volumes:
+      - /portainer/Logs:/logs
+      - /opt/stacks/tautulli/data:/config
+    restart: unless-stopped

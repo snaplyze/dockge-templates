@@ -1,0 +1,11 @@
+services:
+  rdesktop:
+    image: linuxserver/rdesktop:latest
+    container_name: rdesktop
+    ports:
+      - "3389:3389"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /volume1/docker/rdesktop/config:/config
+    restart: unless-stopped
+    privileged: true

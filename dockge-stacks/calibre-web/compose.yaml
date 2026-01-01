@@ -1,0 +1,10 @@
+services:
+  calibre-web:
+    image: linuxserver/calibre-web:latest
+    container_name: calibre-web
+    ports:
+      - "8083:8083"
+    volumes:
+      - /portainer/Books:/books
+      - /opt/stacks/calibre-web/data:/config
+    restart: unless-stopped

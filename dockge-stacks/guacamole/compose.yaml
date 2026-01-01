@@ -1,0 +1,9 @@
+services:
+  guacamole:
+    image: oznu/guacamole:latest
+    container_name: guacamole
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/stacks/guacamole/data:/config
+    restart: unless-stopped

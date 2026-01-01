@@ -1,0 +1,11 @@
+services:
+  nano:
+    image: linuxserver/nano:latest
+    container_name: nano
+    ports:
+      - "8075:8075"
+      - "7076:3000"
+      - "7077:3001"
+    volumes:
+      - /volume1/docker/nano/config:/config
+    restart: unless-stopped

@@ -1,0 +1,8 @@
+services:
+  postgresql:
+    image: postgres:latest
+    container_name: postgresql
+    ports:
+      - "5432:5432"
+    volumes:
+      - /opt/stacks/postgresql/data/var_lib_postgresql_data:/var/lib/postgresql/data

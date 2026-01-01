@@ -1,0 +1,8 @@
+services:
+  ghost:
+    image: ghost:latest
+    container_name: ghost
+    ports:
+      - "2368:2368"
+    volumes:
+      - /opt/stacks/ghost/data/var_lib_ghost_content:/var/lib/ghost/content

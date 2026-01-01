@@ -1,0 +1,7 @@
+services:
+  nodejs:
+    image: node:latest
+    container_name: nodejs
+    command: "/bin/bash"
+    stdin_open: true
+    tty: true

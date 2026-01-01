@@ -1,0 +1,9 @@
+services:
+  libreoffice:
+    image: linuxserver/libreoffice:latest
+    container_name: libreoffice
+    ports:
+      - "3000:3000"
+    volumes:
+      - /volume1/docker/libreoffice/config:/config
+    restart: unless-stopped

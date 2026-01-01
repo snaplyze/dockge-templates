@@ -1,0 +1,9 @@
+services:
+  chevereto:
+    image: nmtan/chevereto:latest
+    container_name: chevereto
+    ports:
+      - "80:80"
+    volumes:
+      - /opt/stacks/chevereto/data/var_www_html_images:/var/www/html/images
+    restart: unless-stopped

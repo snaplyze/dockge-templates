@@ -1,0 +1,7 @@
+services:
+  ubuntu:
+    image: ubuntu:latest
+    container_name: ubuntu
+    command: "/bin/bash"
+    stdin_open: true
+    tty: true

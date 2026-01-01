@@ -1,0 +1,9 @@
+services:
+  htpcmanager:
+    image: linuxserver/htpcmanager:latest
+    container_name: htpcmanager
+    ports:
+      - "8085:8085"
+    volumes:
+      - /opt/stacks/htpcmanager/data:/config
+    restart: unless-stopped

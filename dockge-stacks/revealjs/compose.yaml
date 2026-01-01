@@ -1,0 +1,10 @@
+services:
+  revealjs:
+    image: cloudogu/reveal.js
+    container_name: revealjs
+    ports:
+      - "6060:8080"
+    volumes:
+      - /opt/stacks/revealjs/data/reveal_docs_slides:/reveal/docs/slides
+      - /opt/stacks/revealjs/data/resources:/resources
+    restart: always

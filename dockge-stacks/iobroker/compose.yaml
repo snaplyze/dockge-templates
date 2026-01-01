@@ -1,0 +1,9 @@
+services:
+  iobroker:
+    image: buanet/iobroker:latest
+    container_name: iobroker
+    ports:
+      - "8081:8081"
+    volumes:
+      - /opt/stacks/iobroker/data/opt_iobroker:/opt/iobroker
+    restart: unless-stopped

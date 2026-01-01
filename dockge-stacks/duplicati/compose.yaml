@@ -1,0 +1,12 @@
+services:
+  duplicati:
+    image: linuxserver/duplicati:latest
+    container_name: duplicati
+    ports:
+      - "8200:8200"
+    volumes:
+      - /opt/stacks/duplicati/data:/config
+      - /opt/stacks/duplicati/data/tmp:/tmp
+      - /opt/stacks/duplicati/data/backups:/backups
+      - /opt/stacks/duplicati/data/source:/source
+    restart: unless-stopped
